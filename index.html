@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Roll Skin Free Garena</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    #container {
+      padding-top: 100px;
+    }
+
+    #jumpscare {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      z-index: 9999;
+    }
+
+    #jumpscare img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>🎁 ROLL SKIN FREE GARENA 🎁</h1>
+    <p>Chọn 1 trong 3 ô dưới để nhận skin miễn phí</p>
+    <button onclick="start()">Nhận ngay</button>
+  </div>
+
+  <div id="jumpscare">
+    <img src="https://i.imgur.com/2xW2qvK.jpeg" alt="Jumpscare">
+    <audio id="scream" autoplay>
+      <source src="https://www.myinstants.com/media/sounds/haha-funny.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    function start() {
+      setTimeout(() => {
+        document.getElementById("jumpscare").style.display = "block";
+        const scream = document.getElementById("scream");
+        scream.play();
+      }, 5000); // sau 5 giây
+    }
+  </script>
+</body>
+</html>
